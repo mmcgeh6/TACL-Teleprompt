@@ -1,0 +1,12 @@
+run = "npm run dev"
+entrypoint = "src/App.tsx"
+modules = ["nodejs-20"]
+
+[[ports]]
+localPort = 5173
+externalPort = 80
+
+[deployment]
+deploymentTarget = "static"
+build = ["npm", "run", "build"]
+publicDir = "dist"
